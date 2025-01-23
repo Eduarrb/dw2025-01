@@ -1,3 +1,56 @@
 body {
-    margin: 0;
+    /* margin: 0; */
+    /* margin: 20px 40px 0 100px; */
+    /* margin: 20px 30px; */
 }
+
+header {
+    text-align: center;
+    /* border: 1px solid #2f9e44; */
+    /* color: peru; */
+    /* color: rgb(0, 96, 85); */
+    color: #1abc9c;
+    border: 1px solid #1abc9c;
+    /* border-left: 1px solid #1abc9c; */
+    border-radius: 5px;
+    /* height: 30px; */
+    line-height: 30px;
+    text-transform: uppercase;
+    /* margin: 0 0 10px 0; */
+}
+
+section {
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+section article,
+section aside {
+    border: 1px solid peru;
+    border-radius: 5px;
+    text-align: center;
+    color: peru;
+    text-transform: uppercase;
+    height: 50px;
+    line-height: 50px;
+}
+
+/* section aside {
+    border: 1px solid peru;
+    border-radius: 5px;
+    text-align: center;
+    color: peru;
+    text-transform: uppercase;
+    height: 50px;
+    line-height: 50px;
+} */
+
+/* Explicar el padding */
+/* a {
+    border: 1px solid #8e44ad;
+    margin-right: 10px;
+    padding: 20px;
+} */
