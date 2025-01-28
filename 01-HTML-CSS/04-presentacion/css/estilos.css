@@ -9,7 +9,7 @@
     --primarioClaro: #f1c40f;
     --secundario: #16a085;
     --secundarioClaro: #1abc9c;
-    --blanco: white;
+    --blanco: #fff;
 }
 
 *,
@@ -30,6 +30,13 @@ html {
         1rem = 10px --->  ?
     */
     font-size: 62.5%; /* la fuente base es de 10px */
+}
+
+/* CONSTANTES */
+.contenedor {
+    max-width: 120rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 body {
@@ -73,4 +80,46 @@ body {
     /* .nav--link.active {
         background-color: var(--primario);
     } */
+}
+
+.ubicacion {
+    /* padding-top: 10rem; */
+    /* padding-bottom: 10rem; */
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .ubicacion__box {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        background-color: rgba(0,0,0,.7);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .ubicacion__box--descri {
+            font-size: 2.4rem;
+            color: var(--blanco);
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        .ubicacion__box--locale {
+            i {
+                color: var(--primario);
+                font-size: 2.4rem;
+                margin-right: .5rem;
+            }
+            span {
+                color: var(--blanco);
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+main {
+    /* border: 2px solid black; */
+    border-radius: 2rem;
+    margin-top: 3rem;
+    padding: 2rem;
+    box-shadow: 0 0 2rem 0 rgba(0,0,0, .3);
 }
