@@ -34,23 +34,44 @@ section aside {
     text-align: center;
     color: peru;
     text-transform: uppercase;
-    height: 50px;
+    height: 100px;
     line-height: 50px;
 }
 
-/* section aside {
-    border: 1px solid peru;
-    border-radius: 5px;
-    text-align: center;
-    color: peru;
-    text-transform: uppercase;
-    height: 50px;
-    line-height: 50px;
-} */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* justify-content: space-evenly; */
+}
 
-/* Explicar el padding */
-/* a {
-    border: 1px solid #8e44ad;
-    margin-right: 10px;
-    padding: 20px;
-} */
+section article {
+    /* width: 1200px; */
+    /* width: calc(70% - 18px); */
+    box-sizing: border-box;
+    /* width: 30%; */
+    width: calc(70% - 20px);
+    /* margin-right: 30px; */
+}
+
+section aside {
+    /* width: calc(30% - 2px); */
+    box-sizing: border-box;
+    width: 30%;
+    /* width: calc(30% - 10px); */
+}
+
+footer {
+    border: 1px solid #9b59b6;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px 0;
+    color: #9b59b6;
+    text-transform: uppercase;
+}
+
+
+
+
+
