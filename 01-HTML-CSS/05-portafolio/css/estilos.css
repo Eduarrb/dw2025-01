@@ -1,0 +1,57 @@
+:root {
+  --primary: #1e30f4;
+  --secondary: #d41f88;
+  --gris: rgba(0, 0, 0, .55);
+  --font-jakarta: "Plus Jakarta Sans", serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-jakarta);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 120rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__container--logo {
+  font-size: 2rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+.nav__container__menu--link {
+  color: var(--gris);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=estilos.css.map */
