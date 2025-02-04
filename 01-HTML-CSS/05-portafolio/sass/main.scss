@@ -1,4 +1,3 @@
-@use 'base/base';
-@use 'base/constants';
+@forward 'base';
 
-@use 'modules/nav';
+@forward 'modules';

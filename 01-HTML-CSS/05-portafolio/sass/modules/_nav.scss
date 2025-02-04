@@ -1,17 +1,29 @@
+@use '../base/variables' as v;
+
 .nav {
     &__container {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         &--logo {
             font-size: 2rem;
-            color: var(--primary);
+            color: v.$primary;
             font-weight: 700;
         }
         &__menu {
+            display: flex;
             &--link {
-                color: var(--gris);
+                color: v.$gris;
                 font-size: 1.4rem;
                 font-weight: 700;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                text-transform: capitalize;
+                &:hover {
+                    color: darken(v.$gris, 20%);
+                }
             }
         }
     }

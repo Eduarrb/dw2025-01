@@ -1,0 +1,31 @@
+@use '../base/variables' as v;
+
+.header {
+    &__container {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        gap: 3rem;
+        &__data {
+            &--top {
+                background: linear-gradient(90deg, v.$primary 10%, v.$secondary 100%);
+                font-size: 1.2rem;
+                color: v.$blanco;
+                display: inline-block;
+                text-transform: uppercase;
+                padding: .1rem .7rem;
+                border-radius: .5rem;
+            }
+            &--descri {
+                font-size: 2.8rem;
+                color: v.$gris;
+                font-weight: 100;
+            }
+            &--title {
+                font-size: 6.4rem;
+                background: linear-gradient(180deg, v.$primary 0%, v.$secondary 90%);
+                color: transparent;
+                background-clip: text;
+            }
+        }
+    }
+}
