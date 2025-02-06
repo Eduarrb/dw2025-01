@@ -6,6 +6,8 @@
         grid-template-columns: 40% 60%;
         gap: 3rem;
         &__data {
+            padding-top: 10rem;
+            padding-bottom: 15rem;
             &--top {
                 background: linear-gradient(90deg, v.$primary 10%, v.$secondary 100%);
                 font-size: 1.2rem;
@@ -25,6 +27,49 @@
                 background: linear-gradient(180deg, v.$primary 0%, v.$secondary 90%);
                 color: transparent;
                 background-clip: text;
+            }
+            &__botones {
+                display: flex;
+                // gap: 2rem;
+            }
+        }
+        &__avatar {
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            &__imgBox {
+                position: relative;
+                // background-color: peru;
+                background: linear-gradient(160deg, v.$primary 0%, v.$secondary 100%);
+                width: 75%;
+                height: 90%;
+                border-radius: 10rem;
+                img, .dots {
+                    position: absolute;
+                }
+                img {
+                    width: 85%;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                .dots {
+                    width: 3rem;
+                    // left: -2rem;
+                }
+                .dot-1, .dot-2 {
+                    fill: v.$primary;
+                    bottom: 0;
+                }
+                .dot-2 {
+                    left: 10%;
+                }
+                .dot-3, .dot-4 {
+                    fill: v.$secondary;
+                    bottom: 0;
+                    right: 0;
+                }
             }
         }
     }
