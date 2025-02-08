@@ -1,0 +1,17 @@
+@use '../base/variables' as v;
+
+
+.footer {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.4rem;
+        &__col {
+            a {
+                color: v.$primary;
+                text-decoration: underline;
+            }
+        }
+    }
+}

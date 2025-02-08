@@ -1,3 +1,14 @@
+/*
+    BREAKPOINTS EN EMS
+
+    1200PX / 16PX =  75em
+    992PX / 16PX = 62em
+    768PX / 16PX = 48em
+    576PX / 16PX = 36em
+    420PX / 16PX = 26.25em
+    380PX / 16PX = 23.75em
+
+*/
 *,
 *::after,
 *::before {
@@ -12,6 +23,13 @@ html {
 
 body {
   font-family: "Plus Jakarta Sans", serif;
+}
+
+article {
+  font-size: 2rem;
+}
+article aside {
+  font-size: 3em;
 }
 
 a {
@@ -32,6 +50,15 @@ img {
   max-width: 120rem;
   margin-right: auto;
   margin-left: auto;
+}
+@media only screen and (max-width: 75em) {
+  .container {
+    max-width: 96rem;
+  }
+}
+
+.text-center {
+  text-align: center;
 }
 
 .btn {
@@ -499,6 +526,50 @@ img {
   fill: #1e30f4;
   top: 12.1rem;
   right: -4rem;
+}
+
+.acerca {
+  background-color: #f8f9fb;
+}
+.acerca__container {
+  padding-left: 20rem;
+  padding-right: 20rem;
+}
+.acerca__container--titulo {
+  font-size: 4.8rem;
+  background: linear-gradient(90deg, #1e30f4 40%, #d41f88 60%);
+  color: transparent;
+  background-clip: text;
+  text-transform: capitalize;
+}
+.acerca__container--subtitulo {
+  font-size: 2rem;
+  font-weight: 100;
+}
+.acerca__container--descri {
+  font-size: 1.6rem;
+  color: #78716f;
+  line-height: 2.6rem;
+}
+.acerca__container__box {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 3rem;
+  background: linear-gradient(170deg, #1e30f4 40%, #d41f88 60%);
+  color: transparent;
+  background-clip: text;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+}
+.footer__container__col a {
+  color: #1e30f4;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=estilos.css.map */

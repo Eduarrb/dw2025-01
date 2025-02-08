@@ -16,6 +16,14 @@ body {
     font-family: v.$font-jakarta;
 }
 
+article {
+    font-size: 2rem; // 20px
+    aside {
+        font-size: 3em; // 1em -> 20px = 60px
+    }
+}
+
+
 a {
     text-decoration: none;
     display: inline-block;

@@ -1,7 +1,27 @@
 $primary: #1e30f4;
 $secondary: #d41f88;
 $gris: #78716f;
+$grisBG: #f8f9fb;
 $blanco: #ffffff;
 $negro: #000000;
 
 $font-jakarta:  "Plus Jakarta Sans", serif;
+
+/*
+    BREAKPOINTS EN EMS
+
+    1200PX / 16PX =  75em
+    992PX / 16PX = 62em
+    768PX / 16PX = 48em
+    576PX / 16PX = 36em
+    420PX / 16PX = 26.25em
+    380PX / 16PX = 23.75em
+
+*/
+
+$bp-extraLarge: 75em;
+$bp-large: 62em;
+$bp-medium: 48em;
+$bp-small: 36em;
+$bpextraSmall: 26.25em;
+$bp-tiny: 23.75em;
