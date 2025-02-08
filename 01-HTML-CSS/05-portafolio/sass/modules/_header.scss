@@ -34,7 +34,7 @@
             }
         }
         &__avatar {
-            border: 1px solid black;
+            // border: 1px solid black;
             display: flex;
             justify-content: center;
             align-items: flex-end;
@@ -58,17 +58,25 @@
                     width: 3rem;
                     // left: -2rem;
                 }
-                .dot-1, .dot-2 {
+                .dot-1 {
                     fill: v.$primary;
-                    bottom: 0;
+                    bottom: 6rem;
+                    left: -4rem;
                 }
                 .dot-2 {
-                    left: 10%;
+                    fill: v.$blanco;
+                    bottom: 10.1rem;
+                    left: 1.2rem;
                 }
-                .dot-3, .dot-4 {
-                    fill: v.$secondary;
-                    bottom: 0;
-                    right: 0;
+                .dot-3 {
+                    fill: v.$blanco;
+                    right: 1.2rem;
+                    top: 8rem;
+                }
+                .dot-4 {
+                    fill: v.$primary;
+                    top: 12.1rem;
+                    right: -4rem;
                 }
             }
         }

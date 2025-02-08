@@ -237,6 +237,166 @@ img {
   margin-left: 10rem;
 }
 
+.pl-1 {
+  padding-left: 1rem;
+}
+
+.pl-2 {
+  padding-left: 2rem;
+}
+
+.pl-3 {
+  padding-left: 3rem;
+}
+
+.pl-4 {
+  padding-left: 4rem;
+}
+
+.pl-5 {
+  padding-left: 5rem;
+}
+
+.pl-6 {
+  padding-left: 6rem;
+}
+
+.pl-7 {
+  padding-left: 7rem;
+}
+
+.pl-8 {
+  padding-left: 8rem;
+}
+
+.pl-9 {
+  padding-left: 9rem;
+}
+
+.pl-10 {
+  padding-left: 10rem;
+}
+
+.pr-1 {
+  padding-right: 1rem;
+}
+
+.pr-2 {
+  padding-right: 2rem;
+}
+
+.pr-3 {
+  padding-right: 3rem;
+}
+
+.pr-4 {
+  padding-right: 4rem;
+}
+
+.pr-5 {
+  padding-right: 5rem;
+}
+
+.pr-6 {
+  padding-right: 6rem;
+}
+
+.pr-7 {
+  padding-right: 7rem;
+}
+
+.pr-8 {
+  padding-right: 8rem;
+}
+
+.pr-9 {
+  padding-right: 9rem;
+}
+
+.pr-10 {
+  padding-right: 10rem;
+}
+
+.pt-1 {
+  padding-top: 1rem;
+}
+
+.pt-2 {
+  padding-top: 2rem;
+}
+
+.pt-3 {
+  padding-top: 3rem;
+}
+
+.pt-4 {
+  padding-top: 4rem;
+}
+
+.pt-5 {
+  padding-top: 5rem;
+}
+
+.pt-6 {
+  padding-top: 6rem;
+}
+
+.pt-7 {
+  padding-top: 7rem;
+}
+
+.pt-8 {
+  padding-top: 8rem;
+}
+
+.pt-9 {
+  padding-top: 9rem;
+}
+
+.pt-10 {
+  padding-top: 10rem;
+}
+
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
+.pb-2 {
+  padding-bottom: 2rem;
+}
+
+.pb-3 {
+  padding-bottom: 3rem;
+}
+
+.pb-4 {
+  padding-bottom: 4rem;
+}
+
+.pb-5 {
+  padding-bottom: 5rem;
+}
+
+.pb-6 {
+  padding-bottom: 6rem;
+}
+
+.pb-7 {
+  padding-bottom: 7rem;
+}
+
+.pb-8 {
+  padding-bottom: 8rem;
+}
+
+.pb-9 {
+  padding-bottom: 9rem;
+}
+
+.pb-10 {
+  padding-bottom: 10rem;
+}
+
 .nav__container {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -297,7 +457,6 @@ img {
   display: flex;
 }
 .header__container__avatar {
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -321,17 +480,25 @@ img {
 .header__container__avatar__imgBox .dots {
   width: 3rem;
 }
-.header__container__avatar__imgBox .dot-1, .header__container__avatar__imgBox .dot-2 {
+.header__container__avatar__imgBox .dot-1 {
   fill: #1e30f4;
-  bottom: 0;
+  bottom: 6rem;
+  left: -4rem;
 }
 .header__container__avatar__imgBox .dot-2 {
-  left: 10%;
+  fill: #ffffff;
+  bottom: 10.1rem;
+  left: 1.2rem;
 }
-.header__container__avatar__imgBox .dot-3, .header__container__avatar__imgBox .dot-4 {
-  fill: #d41f88;
-  bottom: 0;
-  right: 0;
+.header__container__avatar__imgBox .dot-3 {
+  fill: #ffffff;
+  right: 1.2rem;
+  top: 8rem;
+}
+.header__container__avatar__imgBox .dot-4 {
+  fill: #1e30f4;
+  top: 12.1rem;
+  right: -4rem;
 }
 
 /*# sourceMappingURL=estilos.css.map */
