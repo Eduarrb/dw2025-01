@@ -5,9 +5,17 @@
         display: grid;
         grid-template-columns: 40% 60%;
         gap: 3rem;
+        @media only screen and (max-width: v.$bp-extraLarge) { 
+            grid-template-columns: 100%;
+            grid-template-rows: 1fr 2.4fr;
+        }
         &__data {
             padding-top: 10rem;
             padding-bottom: 15rem;
+            @media only screen and (max-width: v.$bp-extraLarge) {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
             &--top {
                 background: linear-gradient(90deg, v.$primary 10%, v.$secondary 100%);
                 font-size: 1.2rem;

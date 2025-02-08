@@ -456,9 +456,21 @@ img {
   grid-template-columns: 40% 60%;
   gap: 3rem;
 }
+@media only screen and (max-width: 75em) {
+  .header__container {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 2.4fr;
+  }
+}
 .header__container__data {
   padding-top: 10rem;
   padding-bottom: 15rem;
+}
+@media only screen and (max-width: 75em) {
+  .header__container__data {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 .header__container__data--top {
   background: linear-gradient(90deg, #1e30f4 10%, #d41f88 100%);
