@@ -15,7 +15,16 @@
         &__menu {
             display: flex;
             @media only screen and (max-width: v.$bp-large) {
-                display: none;
+                position: fixed;
+                background-color: rgba(v.$negro, .95);
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1;
+                height: 100vh;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
             }
             &--link {
                 color: v.$gris;
@@ -24,6 +33,9 @@
                 padding-left: 1rem;
                 padding-right: 1rem;
                 text-transform: capitalize;
+                @media only screen and (max-width: v.$bp-large) {
+                    color: v.$blanco;
+                }
                 &:hover {
                     color: darken(v.$gris, 20%);
                 }
