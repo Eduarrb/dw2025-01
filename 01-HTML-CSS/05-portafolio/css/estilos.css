@@ -56,6 +56,22 @@ img {
     max-width: 96rem;
   }
 }
+@media only screen and (max-width: 62em) {
+  .container {
+    max-width: 72rem;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .container {
+    max-width: 54rem;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
 
 .text-center {
   text-align: center;
@@ -439,6 +455,11 @@ img {
 .nav__container__menu {
   display: flex;
 }
+@media only screen and (max-width: 62em) {
+  .nav__container__menu {
+    display: none;
+  }
+}
 .nav__container__menu--link {
   color: #78716f;
   font-size: 1.4rem;
@@ -450,7 +471,26 @@ img {
 .nav__container__menu--link:hover {
   color: rgb(67.012987013, 63.1038961039, 61.987012987);
 }
+.nav__container__iconBox {
+  font-size: 2.2rem;
+  color: #78716f;
+  border: 1px solid rgba(120, 113, 111, 0.4);
+  padding: 0.5rem 1.6rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: none;
+}
+@media only screen and (max-width: 62em) {
+  .nav__container__iconBox {
+    display: block;
+  }
+}
 
+@media only screen and (max-width: 75em) {
+  .header {
+    margin-top: 4rem;
+  }
+}
 .header__container {
   display: grid;
   grid-template-columns: 40% 60%;
@@ -459,7 +499,17 @@ img {
 @media only screen and (max-width: 75em) {
   .header__container {
     grid-template-columns: 100%;
-    grid-template-rows: 1fr 2.4fr;
+    grid-template-rows: 1fr 2fr;
+  }
+}
+@media only screen and (max-width: 62em) {
+  .header__container {
+    grid-template-rows: 1fr 1.4fr;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .header__container {
+    grid-template-rows: 1fr 1.1fr;
   }
 }
 .header__container__data {
@@ -470,6 +520,9 @@ img {
   .header__container__data {
     padding-top: 0;
     padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 .header__container__data--top {
@@ -492,13 +545,44 @@ img {
   color: transparent;
   background-clip: text;
 }
+@media only screen and (max-width: 75em) {
+  .header__container__data--title {
+    text-align: center;
+  }
+  .header__container__data--title br {
+    content: "";
+  }
+}
+@media only screen and (max-width: 36em) {
+  .header__container__data--title {
+    font-size: 4rem;
+    width: 80%;
+  }
+}
 .header__container__data__botones {
   display: flex;
+}
+@media only screen and (max-width: 36em) {
+  .header__container__data__botones {
+    width: 100%;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .header__container__data__botones a {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
 }
 .header__container__avatar {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+}
+@media only screen and (max-width: 75em) {
+  .header__container__avatar {
+    align-items: flex-end;
+  }
 }
 .header__container__avatar__imgBox {
   position: relative;
@@ -506,6 +590,27 @@ img {
   width: 75%;
   height: 90%;
   border-radius: 10rem;
+}
+@media only screen and (max-width: 75em) {
+  .header__container__avatar__imgBox {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 62em) {
+  .header__container__avatar__imgBox {
+    border-radius: 5rem;
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .header__container__avatar__imgBox {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 36em) {
+  .header__container__avatar__imgBox {
+    height: 75%;
+  }
 }
 .header__container__avatar__imgBox img, .header__container__avatar__imgBox .dots {
   position: absolute;
@@ -519,10 +624,20 @@ img {
 .header__container__avatar__imgBox .dots {
   width: 3rem;
 }
+@media only screen and (max-width: 36em) {
+  .header__container__avatar__imgBox .dots {
+    width: 2rem;
+  }
+}
 .header__container__avatar__imgBox .dot-1 {
   fill: #1e30f4;
   bottom: 6rem;
   left: -4rem;
+}
+@media only screen and (max-width: 36em) {
+  .header__container__avatar__imgBox .dot-1 {
+    left: -3rem;
+  }
 }
 .header__container__avatar__imgBox .dot-2 {
   fill: #ffffff;
@@ -539,6 +654,11 @@ img {
   top: 12.1rem;
   right: -4rem;
 }
+@media only screen and (max-width: 36em) {
+  .header__container__avatar__imgBox .dot-4 {
+    right: -3rem;
+  }
+}
 
 .acerca {
   background-color: #f8f9fb;
@@ -546,6 +666,12 @@ img {
 .acerca__container {
   padding-left: 20rem;
   padding-right: 20rem;
+}
+@media only screen and (max-width: 75em) {
+  .acerca__container {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
 }
 .acerca__container--titulo {
   font-size: 4.8rem;

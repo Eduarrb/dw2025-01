@@ -1,13 +1,22 @@
 @use '../base/variables' as v;
 
 .header {
+    @media only screen and (max-width: v.$bp-extraLarge) {
+        margin-top: 4rem;
+    }
     &__container {
         display: grid;
         grid-template-columns: 40% 60%;
         gap: 3rem;
         @media only screen and (max-width: v.$bp-extraLarge) { 
             grid-template-columns: 100%;
-            grid-template-rows: 1fr 2.4fr;
+            grid-template-rows: 1fr 2fr;
+        }
+        @media only screen and (max-width: v.$bp-large) {
+            grid-template-rows: 1fr 1.4fr;
+        }
+        @media only screen and (max-width: v.$bp-small) {
+            grid-template-rows: 1fr 1.1fr;
         }
         &__data {
             padding-top: 10rem;
@@ -15,6 +24,9 @@
             @media only screen and (max-width: v.$bp-extraLarge) {
                 padding-top: 0;
                 padding-bottom: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
             &--top {
                 background: linear-gradient(90deg, v.$primary 10%, v.$secondary 100%);
@@ -35,10 +47,29 @@
                 background: linear-gradient(180deg, v.$primary 0%, v.$secondary 90%);
                 color: transparent;
                 background-clip: text;
+                @media only screen and (max-width: v.$bp-extraLarge) {
+                    text-align: center;
+                    br {
+                        content: "";
+                    }
+                }
+                @media only screen and (max-width: v.$bp-small) {
+                    font-size: 4rem;
+                    width: 80%;
+                }
             }
             &__botones {
                 display: flex;
-                // gap: 2rem;
+                @media only screen and (max-width: v.$bp-small) {
+                    width: 100%;
+                    flex-direction: column;
+                    row-gap: 1rem;
+                    a {
+                        width: 100%;
+                        margin-left: 0;
+                        text-align: center;
+                    }
+                }
             }
         }
         &__avatar {
@@ -46,6 +77,9 @@
             display: flex;
             justify-content: center;
             align-items: flex-end;
+            @media only screen and (max-width: v.$bp-extraLarge) {
+                align-items: flex-end;
+            }
             &__imgBox {
                 position: relative;
                 // background-color: peru;
@@ -53,6 +87,19 @@
                 width: 75%;
                 height: 90%;
                 border-radius: 10rem;
+                @media only screen and (max-width: v.$bp-extraLarge) {
+                    width: 50%;
+                }
+                @media only screen and (max-width: v.$bp-large) {
+                    border-radius: 5rem;
+                    width: 60%;
+                }
+                @media only screen and (max-width: v.$bp-medium) {
+                    width: 80%;
+                }
+                @media only screen and (max-width: v.$bp-small) {
+                    height: 75%;
+                }
                 img, .dots {
                     position: absolute;
                 }
@@ -64,12 +111,17 @@
                 }
                 .dots {
                     width: 3rem;
-                    // left: -2rem;
+                    @media only screen and (max-width: v.$bp-small) {
+                        width: 2rem;
+                    }
                 }
                 .dot-1 {
                     fill: v.$primary;
                     bottom: 6rem;
                     left: -4rem;
+                    @media only screen and (max-width: v.$bp-small) {
+                        left: -3rem;
+                    }
                 }
                 .dot-2 {
                     fill: v.$blanco;
@@ -85,6 +137,9 @@
                     fill: v.$primary;
                     top: 12.1rem;
                     right: -4rem;
+                    @media only screen and (max-width: v.$bp-small) {
+                        right: -3rem;
+                    }
                 }
             }
         }

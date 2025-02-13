@@ -5,6 +5,10 @@
     &__container {
         padding-left: 20rem;
         padding-right: 20rem;
+        @media only screen and (max-width: v.$bp-extraLarge) {
+            padding-left: 10rem;
+            padding-right: 10rem;
+        }
         &--titulo {
             font-size: 4.8rem;
             background: linear-gradient(90deg, v.$primary 40%, v.$secondary 60%);

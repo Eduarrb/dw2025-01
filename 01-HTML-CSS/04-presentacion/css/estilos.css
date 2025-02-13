@@ -147,6 +147,9 @@ main {
             @media (min-width: 768px) {
                 margin-bottom: 0 !important;
             }
+            @media (min-width: 992px) {
+                
+            }
             .servicios__item--iconBox {
                 font-size: 4.2rem;
                 width: 9rem;
