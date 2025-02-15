@@ -18,13 +18,18 @@
                 position: fixed;
                 background-color: rgba(v.$negro, .95);
                 top: 0;
-                left: 0;
+                left: -100%;
                 width: 100%;
                 z-index: 1;
                 height: 100vh;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                transition: all .3s;
+                &.active {
+                    left: 0;
+                    transition: all .3s
+                }
             }
             &--link {
                 color: v.$gris;
@@ -35,6 +40,10 @@
                 text-transform: capitalize;
                 @media only screen and (max-width: v.$bp-large) {
                     color: v.$blanco;
+                    font-size: 2.8rem;
+                    &:not(:last-child) {
+                        margin-bottom: 2rem;
+                    }
                 }
                 &:hover {
                     color: darken(v.$gris, 20%);
@@ -49,8 +58,10 @@
             border-radius: .5rem;
             cursor: pointer;
             display: none;
+            background-color: v.$blanco;
             @media only screen and (max-width: v.$bp-large) {
                 display: block;
+                z-index: 1;
             }
         }
     }
