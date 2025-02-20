@@ -10,4 +10,15 @@ const datosCompletos = 'Hola, soy ' + nombre + ' ' + apellido + ' y tengo ' + ed
 // console.log(datosCompletos);
 
 const res = `Hola, soy ${nombre} ${apellido} y tengo ${edad} años`;
-console.log(res);
+// console.log(res);
+
+const bloque = document.querySelector('.bloque');
+// console.log(bloque);
+let plantilla = `
+    <ul>
+        <li>${nombre}</li>
+        <li>${apellido}</li>
+    </ul>
+`;
+
+bloque.innerHTML = plantilla;
