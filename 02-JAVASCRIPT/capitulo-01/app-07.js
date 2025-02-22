@@ -77,19 +77,21 @@ const personaje = {
             this.plantilla += `<h2>${this.skills[i]}</h2>`;
         }
     },
-    printPlantilla: function() {
-        console.log(this.plantilla);
+    printPlantilla: function(bloque) {
+        // console.log(this.plantilla);
+        bloque.innerHTML = this.plantilla;
     }
 }
 
+const bloque = document.querySelector('.bloque');
 personaje.crearPlantillaSkill();
-personaje.printPlantilla()
+personaje.printPlantilla(bloque);
+
 // console.log(personaje.plantilla);
 
 // personaje.golpear();
 
 
-// const bloque = document.querySelector('.bloque');
 // console.log(bloque);
 
 // console.log(this);
