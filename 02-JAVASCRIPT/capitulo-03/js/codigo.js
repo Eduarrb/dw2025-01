@@ -9,3 +9,19 @@ btn.addEventListener('click', () => {
 btnClose.addEventListener('click', () => {
 	popupCaja.classList.remove('mostrarCaja');
 });
+
+popupCaja.addEventListener('click', e => {
+    // console.log('hiciste click');
+    // popupCaja.classList.remove('mostrarCaja');
+    // console.log(e);
+    if(e.target.classList.contains('popup-caja')){
+        popupCaja.classList.remove('mostrarCaja');
+    }
+});
+
+window.addEventListener('keyup', e => {
+    // console.log(e);
+    if(e.code === "Escape") {
+        popupCaja.classList.remove('mostrarCaja');
+    }
+});
