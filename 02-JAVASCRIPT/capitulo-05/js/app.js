@@ -25,10 +25,10 @@ form.addEventListener('submit', async (e) => {
 
     // imprimirPokemon(pokeNombre.value);
     try {
-        const respuesta = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokeNombre.value}`);
-
+        // const respuesta = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokeNombre.value}`);
+        const respuesta = await axios.get(`https://dragonball-api.com/api/characters?name=goku`);
         const pokemon = respuesta.data;
-        console.log(pokemon);
+        console.log(pokemon[0]);
         // console.log(pokemon.stats[0].base_stat);
         // console.log(pokemon.abilities[0].ability.name);
         // console.log(pokemon.sprites.front_default);
