@@ -10,7 +10,7 @@
     <h1 class="text-center pt-5 pb-5 bg-primary text-white">Bievenido(a) a PeliStream</h1>
     <section class="container">
         <div class="row p-4">
-            <a href="" class="btn btn-success mr-2">Subir Pelicula</a>
+            <a href="crear.php" class="btn btn-success mr-2">Subir Pelicula</a>
             <a href="" class="btn btn-info">Directores</a>
         </div>
         <?php
@@ -32,7 +32,15 @@
 
             // if(true) {
             //     echo 'es verdadero';
-            // }  
+            // } 
+
+            // ⚡⚡ CRUD ⚡⚡
+            /*
+                C -> CREATE
+                R -> READ
+                U -> UPDATE
+                D -> DELETE
+            */
         ?>
 
         <?php include('db.php'); ?>
