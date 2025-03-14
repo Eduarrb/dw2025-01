@@ -1,0 +1,30 @@
+@use '../base/mixins' as *;
+@use '../base/variables' as *;
+
+.testimonial {
+    background-color: $verde;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: $blanco;
+    border-radius: 2rem;
+    font-weight: 100;
+    blockquote {
+        padding-left: 6rem;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url(../img/comilla.svg);
+            width: 6rem;
+            height: 6rem;
+            display: block;
+            left: -.6rem;
+
+        }
+    }
+    p {
+        text-align: right;
+        color: $blanco;
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "bienesraices",
+  "version": "1.0.0",
+  "description": "Curso Desarrollo Web Completo",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "server": "live-server",
+    "sass": "sass --watch src/scss/app.scss:build/css/app.css --style=compressed",
+    "js": "webpack -w --mode development",
+    "dev": "concurrently \"npm run sass\" \"npm run server\" \"npm run js\""
+  },
+  "author": "Eduardo Arroyo",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "live-server": "^1.2.2",
+    "sass": "^1.83.4",
+    "sharp": "^0.33.5",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
+  }
+}
