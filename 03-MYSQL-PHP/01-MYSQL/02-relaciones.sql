@@ -58,7 +58,7 @@ INSERT INTO peliculas (peli_dire_id, peli_nombre, peli_genero, peli_fechaEstreno
 SELECT * FROM peliculas a RIGHT JOIN directores b ON a.peli_dire_id = b.dire_id
 
 INSERT INTO directores (dire_nombres, dire_apellidos) VALUES
-    ('Ron', 'Haward')
+    ('Cristopher', 'Nolan')
 
 -- 3 TABLAS
 SELECT 
