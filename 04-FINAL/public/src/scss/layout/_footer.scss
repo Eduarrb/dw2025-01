@@ -5,8 +5,20 @@
     background-color: $grisOscuro;
     padding: calc($separacion / 2);
     margin-bottom: 0;
-    .contenido-footer {
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .contenedor-footer {
         padding-top: calc($separacion / 2);
+        @include tablet {
+            width: auto;
+            margin: 0;
+            padding: 0;
+        }
+
     }
     .navegacion {
         visibility: visible;
