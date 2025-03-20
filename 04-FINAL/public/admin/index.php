@@ -22,7 +22,7 @@
                         <td>$120000</td>
                         <td>
                             <a href="#" class="btn-amarillo-block">editar</a>
-                            <a href="#" class="btn-amarillo-block">boton</a>
+                            <a href="#" class="btn-rojo-block">boton</a>
                         </td>
                     </tr>
                 </tbody>

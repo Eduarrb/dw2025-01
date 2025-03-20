@@ -4,4 +4,20 @@
             echo $extra;
         }
     }
+
+    function cargaAdminFiles($ruta){
+		if($_SERVER['REQUEST_URI'] === '/admin/' || $_SERVER['REQUEST_URI'] === '/admin/index.php') {
+			echo '../' . $ruta;
+		} else {
+			echo '../../' . $ruta;
+		}
+	}
+    
+	function cargaAdminIndex(){
+		if($_SERVER['REQUEST_URI'] === '/admin/' || $_SERVER['REQUEST_URI'] === '/admin/index.php') {
+			echo './';
+		} else {
+			echo  '../';
+		}
+	}
 ?>

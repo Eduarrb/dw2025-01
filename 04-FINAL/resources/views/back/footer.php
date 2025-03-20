@@ -9,6 +9,6 @@
 			</div>
 			<p class="copyright">Todos los derechos reservados 2025 &copy;</p>
 		</footer>
-		<script src="../build/js/app.js"></script>
+		<script src="<?php cargaAdminFiles('build/js/app.js'); ?>"></script>
 	</body>
 </html>
