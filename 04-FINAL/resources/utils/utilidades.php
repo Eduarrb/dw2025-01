@@ -27,4 +27,18 @@
         echo '</pre>';
         exit;
     }
+
+	function escape($cadena){
+		global $db;
+		return trim(mysqli_real_escape_string($db, $cadena));
+	}
+
+	function query($consulta){
+		global $db;
+		return mysqli_query($db, $consulta);
+	}
+
+	function arrayAssoc($res) {
+		return mysqli_fetch_assoc($res);
+	}
 ?>
