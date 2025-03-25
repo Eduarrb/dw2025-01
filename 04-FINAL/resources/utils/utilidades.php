@@ -41,4 +41,8 @@
 	function arrayAssoc($res) {
 		return mysqli_fetch_assoc($res);
 	}
+
+	function getDato($dato, $index, $campo) {
+        echo !empty($dato[$index][$campo]) ? $dato[$index][$campo] : '';
+    }
 ?>
