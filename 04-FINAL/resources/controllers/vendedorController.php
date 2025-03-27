@@ -1,23 +1,18 @@
 <?php
-    function getVendedorId($id) {
-        $c = 0;
-        define('i', $id);
-        while($c < 3) {
-            echo '<pre>';
-            var_dump($id);
-            echo '</pre>';
-            $c++;
-        }
-    }
-
-    function get_selectVendedor() {
+    function get_selectVendedor($id) {
         $res = query("SELECT * FROM vendedor");
         while($row = arrayAssoc($res)) {
-        ?>
-            <option value="<?php echo $row['id']; ?>">
-                <?php echo $row['nombres'] . " " . $row['apellidos']; ?>
-            </option>
-        <?php }
-            
+            if($row['id'] === $id){
+                ?>
+                    <option value="<?php echo $row['id']; ?>" selected>
+                        <?php echo $row['nombres'] . " " . $row['apellidos']; ?>
+                    </option>
+            <?php } else {
+                ?>
+                    <option value="<?php echo $row['id']; ?>">
+                        <?php echo $row['nombres'] . " " . $row['apellidos']; ?>
+                    </option>
+            <?php }
+        }    
     }
 ?>

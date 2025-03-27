@@ -1,4 +1,5 @@
 <?php
+    ob_start();
     require_once('db.php');
     defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);
 

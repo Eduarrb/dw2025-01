@@ -1,7 +1,7 @@
     <main class="contenedor seccion">
-        <h1>Crear Propiedad</h1>
+        <h1>Editar Propiedad</h1>
         <a href="../" class="btn-verde">volver</a>
-        <?php $res = post_propiedadCrear(); ?>
+        <?php $res = get_propiedad(); ?>
         
         <form class="formulario" method="post" enctype="multipart/form-data">
             <fieldset>
@@ -67,6 +67,7 @@
                     <?php echo getDato($res, 0, 'vendedorId'); ?>
                 </div>
             </fieldset>
-            <input type="submit" value="Crear Propiedad" class="btn-verde">
+            <input type="submit" value="Editar Propiedad" class="btn-verde">
         </form>
+        <?php post_propiedadEdit(getDato($res, 1, 'id')); ?>
     </main>

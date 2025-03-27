@@ -42,7 +42,11 @@
 		return mysqli_fetch_assoc($res);
 	}
 
-	function getDato($dato, $index, $campo) {
-        echo !empty($dato[$index][$campo]) ? $dato[$index][$campo] : '';
+	function getDato($array, $index, $campo) {
+        return !empty($array[$index][$campo]) ? $array[$index][$campo] : '';
     }
+
+	function redirect($location) {
+		header("Location: $location");
+	}
 ?>
