@@ -3,8 +3,8 @@
 <?php include(VIEW_BACK . DS . "header.php"); ?>
 		<main class="contenedor seccion">
 			<h1>Administrador de propiedades</h1>
+            <?php mostrar_msj(); ?>
             <a href="/admin/propiedades/crear.php" class="btn-verde">Nueva propiedad</a>
-
             <table class="propiedades">
                 <thead>
                     <tr>

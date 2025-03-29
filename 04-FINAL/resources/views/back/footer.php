@@ -10,5 +10,7 @@
 			<p class="copyright">Todos los derechos reservados 2025 &copy;</p>
 		</footer>
 		<script src="<?php cargaAdminFiles('build/js/app.js'); ?>"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="<?php cargaAdminFiles('build/js/alert.js'); ?>"></script>
 	</body>
 </html>

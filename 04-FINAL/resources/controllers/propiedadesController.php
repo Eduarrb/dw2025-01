@@ -48,14 +48,13 @@
                 $data['wc'] = $wc;
                 $data['estacionamiento'] = $estacionamiento;
                 $data['vendedorId'] = $vendedorId;
-                // debbugear([$errores, $data]);
                 return [$errores, $data];
             } else {
                 $imagen_name = md5(uniqid()) . "." . explode(".", $imagen_name)[1];
-                // debbugear($imagen_name);
                 move_uploaded_file($imagen_tmp, "../../build/images/$imagen_name");
                 $res = query("INSERT INTO propiedades (titulo, precio, imagen, descripcion, habitaciones, estacionamiento, wc, creado, vendedorId) VALUES ('$titulo', $precio, '$imagen_name', '$descripcion', $habitaciones, $estacionamiento, $wc, NOW(), $vendedorId)");
                 if($res) {
+                    set_mensaje(displayMensaje("Propiedad creada correctamente", "exito"));
                     redirect("/admin");
                 }
             }
@@ -74,7 +73,7 @@
                     <td>$ {$row['precio']}</td>
                     <td>
                         <a href="/admin/propiedades/editar.php?id={$row['id']}" class="btn-amarillo-block">editar</a>
-                        <a href="#" class="btn-rojo-block">boton</a>
+                        <a href="#" class="btn-rojo-block delete" data-id="{$row['id']}">elminar</a>
                     </td>
                 </tr>
 DELIMITADOR;
@@ -96,7 +95,7 @@ DELIMITADOR;
         }
     }
 
-    function post_propiedadEdit($id) {
+    function post_propiedadEdit($id, $imgAnterior) {
         $errores = [];
         $data = [];
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -109,9 +108,18 @@ DELIMITADOR;
             $vendedorId = escape($_POST['vendedorId'] ?? '');
             $imagen_name = escape($_FILES['imagen']['name'] ?? '');
             $imagen_tmp = $_FILES['imagen']['tmp_name'] ?? '';
-
-            $res = query("UPDATE propiedades SET titulo = '$titulo', precio = $precio, descripcion = '$descripcion', habitaciones = $habitaciones, wc = $wc, estacionamiento = $estacionamiento, vendedorId = $vendedorId WHERE id = $id");
+            // debbugear($imgAnterior);
+            if(!empty($imagen_name)) {
+                $imagen_name = md5(uniqid()) . "." . explode(".", $imagen_name)[1];
+                move_uploaded_file($imagen_tmp, "../../build/images/$imagen_name");
+                $imgAnteriorLocation = "../../build/images/$imgAnterior";
+                unlink($imgAnteriorLocation);
+            } else {
+                $imagen_name = $imgAnterior;
+            }
+            $res = query("UPDATE propiedades SET titulo = '$titulo', precio = $precio, descripcion = '$descripcion', habitaciones = $habitaciones, wc = $wc, estacionamiento = $estacionamiento, vendedorId = $vendedorId, imagen = '$imagen_name' WHERE id = $id");
             if($res) {
+                set_mensaje(displayMensaje("Propiedad actualizada correctamente", "exito"));
                 redirect('../');
             }
         }

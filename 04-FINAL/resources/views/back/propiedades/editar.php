@@ -26,6 +26,7 @@
 
                 <label for="imagen">Imagen:</label>
                 <input type="file" id="imagen" name="imagen" accept="image/jpeg, image/png, image/webp">
+                <img src="../../build/images/<?php echo getDato($res, 1, 'imagen'); ?>" alt="<?php echo getDato($res, 1, 'titulo'); ?>" class="imagen-small">
                 <div class="text-error">
                     <?php echo getDato($res, 0, 'imagen'); ?>
                 </div>
@@ -69,5 +70,6 @@
             </fieldset>
             <input type="submit" value="Editar Propiedad" class="btn-verde">
         </form>
-        <?php post_propiedadEdit(getDato($res, 1, 'id')); ?>
+        <?php post_propiedadEdit(getDato($res, 1, 'id'), getDato($res, 1, 'imagen')); ?>
     </main>
+    
