@@ -26,3 +26,15 @@ CREATE TABLE propiedades (
     KEY vendedorId (vendedorId),
     CONSTRAINT vendedor_FK FOREIGN KEY (vendedorId) REFERENCES vendedor (id) ON DELETE CASCADE ON UPDATE CASCADE
 )
+
+CREATE TABLE usuarios (
+    id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nombres VARCHAR(50) NOT NULL,
+    apellidos VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    imagen VARCHAR(50),
+    pass VARCHAR(60) NOT NULL,
+    token VARCHAR(50),
+    status TINYINT(1) NOT NULL DEFAULT 0,
+    rol VARCHAR(20) NOT NULL DEFAULT 'cliente'
+)

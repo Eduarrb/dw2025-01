@@ -124,4 +124,22 @@ DELIMITADOR;
             }
         }
     }
+
+    function post_propiedadDelete() {
+        if(isset($_GET['delete'])) {
+            $id = escape($_GET['delete']);
+            
+            $query = query("SELECT * FROM propiedades WHERE id = $id");
+            if(contarFilas($query)) {
+                $res = query("DELETE FROM propiedades WHERE id = $id");
+                if($res) {
+                    set_mensaje(displayMensaje("Propiedad eliminada correctamente", "exito"));
+                    redirect("admin");
+                }
+            } else {
+                set_mensaje(displayMensaje("El elemenot seleccionado no existe", "error"));
+                redirect("admin");
+            }
+        }
+    }
 ?>

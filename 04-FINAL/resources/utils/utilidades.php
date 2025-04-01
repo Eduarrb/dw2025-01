@@ -73,4 +73,18 @@
 DELIMITADOR;
 	}
 
+	function contarFilas($query){
+		if(mysqli_num_rows($query) === 0) {
+			return false;
+		}
+		return true;
+	}
+
+	function validar_correo($email) {
+		$query = query("SELECT * FROM usuarios WHERE email = '$email'");
+		if(contarFilas($query) >= 1) {
+			return true;
+		}
+		return false;
+	}
 ?>

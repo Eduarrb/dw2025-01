@@ -20,4 +20,5 @@
                 </tbody>
             </table>
 		</main>
+        <?php post_propiedadDelete(); ?>
 		<?php include(VIEW_BACK . DS . "footer.php"); ?>
