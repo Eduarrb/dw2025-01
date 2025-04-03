@@ -1,6 +1,7 @@
 <?php
     ob_start();
     session_start();
+    // session_destroy();
     require_once('db.php');
     defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);
 
@@ -10,6 +11,8 @@
     require_once('utils/utilidades.php');
 
     $db = conectarDB();
+
+    require __DIR__ . '/../public/vendor/autoload.php';
 
     require_once('caller.php');
 ?>
