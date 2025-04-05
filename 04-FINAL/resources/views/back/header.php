@@ -1,3 +1,11 @@
+<?php
+	if(!isset($_SESSION['rol'])) {
+		redirect("../");
+	}
+	if($_SESSION['rol'] !== 'admin') {
+		redirect("../");
+	}
+?>
 <!DOCTYPE html>
 <html lang="es">
 	<head>

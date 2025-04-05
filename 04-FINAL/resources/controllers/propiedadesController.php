@@ -142,4 +142,44 @@ DELIMITADOR;
             }
         }
     }
+
+    function get_propiedadesIndex($limit = 0) {
+        if($limit > 0) {
+            $query = query("SELECT * FROM propiedades LIMIT $limit");
+        } else {
+            $query = query("SELECT * FROM propiedades");
+        }
+        while($row = arrayAssoc($query)) {
+            $propiedad = <<<DELIMITADOR
+                <div class="anuncio">
+                    <picture>
+                        <img loading="lazy" src="build/images/{$row['imagen']}" alt="{$row['titulo']}">
+                    </picture>
+                    <div class="contenido-anuncio">
+                        <h3>{$row['titulo']}</h3>
+                        <p>{$row['descripcion']}</p>
+                        <p class="precio">$ {$row['precio']}</p>
+                        <ul class="iconos-caracteristicas">
+                            <li>
+                                <img class="icono" loading="lazy" src="build/img/icono_wc.svg" alt="icono">
+                                <p>{$row['wc']}</p>
+                            </li>
+                            <li>
+                                <img class="icono" loading="lazy" src="build/img/icono_estacionamiento.svg" alt="icono">
+                                <p>{$row['estacionamiento']}</p>
+                            </li>
+                            <li>
+                                <img class="icono" loading="lazy" src="build/img/icono_dormitorio.svg" alt="icono">
+                                <p>{$row['habitaciones']}</p>
+                            </li>
+                        </ul>
+                        <a href="anuncio.php?id={$row['id']}" class="btn-amarillo-block">
+                            Ver propiedad
+                        </a>
+                    </div>
+                </div>
+DELIMITADOR;
+            echo $propiedad;
+        }
+    }   
 ?>

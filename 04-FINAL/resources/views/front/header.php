@@ -23,6 +23,9 @@
                         <a href="anuncios.php">Anuncios</a>
                         <a href="blog.php">Blog</a>
                         <a href="contacto.php">Contacto</a>
+                        <?php if(isset($_SESSION['rol']) && $_SESSION['rol'] === 'admin') : ?>
+                            <a href="admin">Admin</a>
+                        <?php endif; ?>
                     </nav>
                 </div>
             </div>
