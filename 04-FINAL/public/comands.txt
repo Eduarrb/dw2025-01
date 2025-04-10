@@ -1,5 +1,7 @@
 sudo apt update
 
+sudo apt upgrade
+
 sudo apt install apache2
 
 sudo apt install mysql-server
@@ -14,9 +16,9 @@ UNINSTALL COMPONENT "file://component_validate_password"
 
 sudo apt-get install phpmyadmin
 
-INSTALL COMPONENT "file://component_validate_password";
+INSTALL COMPONENT "file://component_validate_password"
 
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '<tu contraseña generada>';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '<tu contraseña generada>'
 
 FLUSH PRIVILEGES;
 
@@ -30,6 +32,32 @@ ssh-keygen -t rsa -b 4096 -C "root@<ip de tu servidor>"
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 
 cat ~/.ssh/id_rsa
+
+-------------------------------------------------------------------
+
+name: Deploy
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Copy repository contents via scp
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        port: ${{ secrets.PORT }}
+        key: ${{ secrets.SSHKEY }}
+        source: "."
+        target: "/var/www
+
+
 --------------------------------------------------------------------
 
 <VirtualHost *:80>
