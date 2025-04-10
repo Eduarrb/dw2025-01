@@ -181,5 +181,10 @@ DELIMITADOR;
 DELIMITADOR;
             echo $propiedad;
         }
-    }   
+    }
+
+    function get_propiedadIndex($id) {
+        $query = query("SELECT * FROM propiedades WHERE id = $id");
+        return arrayAssoc($query);
+    }
 ?>
